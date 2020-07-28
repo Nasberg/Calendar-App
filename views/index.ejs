@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maxed Habits</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <!-- Full Calendar Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.css" />
+
+    <!-- Full Calendar Links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.css" rel="stylesheet">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3ab7d1c18b.js" crossorigin="anonymous"></script>
+
+    <!-- Moment Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/sv.js"></script>
+
+    <!-- Full Calendar Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/locales/sv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/moment/main.min.js"></script>
+
+    <!-- Bootstrap Tempus Dominus DateTimePicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/css/tempusdominus-bootstrap-4.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.1.2/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <!-- Own stylesheet and script -->
+    <link rel="stylesheet" href="/assets/style.css">
+    <script type="text/javascript" src="/assets/script.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MAXED HABITS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">5</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <!-- Att-göra-hub -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="card mx-auto">
+            <div class="card-body">
+              <div class="row mb-2">
+                <div class="container-fluid">
+                  <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+
+                  <div class="row text-center">
+                    <div class="col-6">
+                      <h4 id="progressPercentage"></h4>
+                    </div>
+                    <div class="col-6">
+                      <h4 id="progressRatio"></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="daygridHr">
+              <div class="container-fluid mt-3">
+                <div id="calendarDay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div id="calendarMonth"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-view-event" tabindex="-1" role="dialog" aria-labelledby="modalViewEvent" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <form id="update-events-form">
+              <div class="modal-header">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="finishedEvent" value="finishedEvent" id="finishedEvent" />
+                  <label class="custom-control-label" for="finishedEvent">Finished</label>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" name="title" id="title">
+                </div>
+                <div class="form-group">
+                  <label>Date</label>
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="input-group date">
+                        <input type='text' class="form-control datetimepicker-input" name="starts_at_date" id="starts-at-date" data-toggle="datetimepicker" data-target="#starts-at-date" />
+                        <div class="input-group-addon">
+                          <span class="input-group-text">-</span>
+                        </div>
+                        <input type='text' class="form-control datetimepicker-input" name="ends_at_date" id="ends-at-date" data-toggle="datetimepicker" data-target="#ends-at-date" />
+                      </div>
+                    </div>
+                    <div class="col-3 my-auto">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" name="allDay" value="allDay" id="allDayEvent" />
+                        <label class="custom-control-label" for="allDayEvent">All Day</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="input-group date">
+                        <input type='text' class="form-control datetimepicker-input" name="starts_at_time" id="starts-at-time" data-toggle="datetimepicker" data-target="#starts-at-time" />
+                        <div class="input-group-addon">
+                          <span class="input-group-text">-</span>
+                        </div>
+                        <input type='text' class="form-control datetimepicker-input" name="ends_at_time" id="ends-at-time" data-toggle="datetimepicker" data-target="#ends-at-time" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-9">
+                      <label>Description</label>
+                      <textarea class="form-control" name="edesc" id="description"></textarea>
+                    </div>
+                    <div class="col-3">
+                      <label>Icon</label>
+                      <select class="form-control custom-select" name="eicon" id="icon">
+                        <option value="work">&#xf0b1;</option>
+                        <option value="food">&#xf2e7;</option>
+                        <option value="code">&#xf121;</option>
+                        <option value="meeting">&#xf2b5;</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="modal-footer" data-id="">
+              <button type="button" class="btn btn-danger" id="delete-event">Delete</button>
+              <button type="button" class="btn btn-primary" id="update-event">Update</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-view-add-event" tabindex="-1" role="dialog" aria-labelledby="modalViewAddEvent" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <form id="add-events-form">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" name="title" id="add-title">
+                </div>
+                <div class="form-group">
+                  <label>Date</label>
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="input-group date">
+                        <input type='text' class="form-control datetimepicker-input" name="starts_at_date" id="add-starts-at-date" data-toggle="datetimepicker" data-target="#add-starts-at-date" />
+                        <div class="input-group-addon">
+                          <span class="input-group-text">-</span>
+                        </div>
+                        <input type='text' class="form-control datetimepicker-input" name="ends_at_date" id="add-ends-at-date" data-toggle="datetimepicker" data-target="#add-ends-at-date" />
+                      </div>
+                    </div>
+                    <div class="col-3 my-auto">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" name="allDay" value="allDay" id="add-allDayEvent" />
+                        <label class="custom-control-label" for="add-allDayEvent">All Day</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="input-group date">
+                        <input type='text' class="form-control datetimepicker-input" name="starts_at_time" id="add-starts-at-time" data-toggle="datetimepicker" data-target="#add-starts-at-time" />
+                        <div class="input-group-addon">
+                          <span class="input-group-text">-</span>
+                        </div>
+                        <input type='text' class="form-control datetimepicker-input" name="ends_at_time" id="add-ends-at-time" data-toggle="datetimepicker" data-target="#add-ends-at-time" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-9">
+                      <label>Description</label>
+                      <textarea class="form-control" name="edesc" id="add-description"></textarea>
+                    </div>
+                    <div class="col-3">
+                      <label>Icon</label>
+                      <select class="form-control custom-select" name="eicon" id="add-icon">
+                        <option value="work">&#xf0b1;</option>
+                        <option value="food">&#xf2e7;</option>
+                        <option value="code">&#xf121;</option>
+                        <option value="meeting">&#xf2b5;</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="save-event">Save</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <canvas id="testChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

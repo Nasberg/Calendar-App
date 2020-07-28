@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.daygridHr {
+  margin: auto;
+  width: 95%;
+}
+
+.progress {
+  margin: auto;
+  width: 90%;
+  height: 3rem;
+}
+
+#icon, #add-icon {
+  font-family: fontAwesome;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
+}
