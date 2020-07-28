@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://maxedevents:maxedevents@eriksfirstcluster-0kjfp.gcp.mongodb.net/maxed_db?retryWrites=true&w=majority");
+mongoose.connect('mongodb+srv://USERNAME:PASSWORD@CLUSTER/DATABASE?retryWrites=true&w=majority');
 
 // mongodb schema for events
 const eventsSchema = new mongoose.Schema({
